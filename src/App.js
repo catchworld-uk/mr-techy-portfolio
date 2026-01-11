@@ -31,7 +31,7 @@ function App() {
     {
       title: 'Secure Auth System',
       description: 'Enterprise-level authentication with JWT tokens and encryption.',
-      link: 'https://my-project-frontend-beta.vercel.app/login',
+      link: 'https://my-project-frontend-beta.vercel.app',
       tags: ['Security', 'Backend'],
       gradient: 'from-cyan-400 via-blue-500 to-indigo-600',
       icon: '🔒',
