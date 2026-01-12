@@ -17,15 +17,14 @@ function App() {
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
 
-  // --- EMAIL BHEJNE WALA FUNCTION ---
+  // --- EMAIL FUNCTION ---
   const onSubmit = async (event) => {
     event.preventDefault();
     setResult("Sending....");
     const formData = new FormData(event.target);
 
-    // 👇👇👇 YAHAN APNI ACCESS KEY DAAL 👇👇👇
+    // 👇👇👇 YAHAN APNI ACCESS KEY DAAL DENA 👇👇👇
     formData.append("access_key", "014fa93a-5fe5-473e-b495-4a48b6480b28"); 
-    // 👆👆👆 SIRF ISKO REPLACE KAR 👆👆👆
 
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
@@ -51,18 +50,17 @@ function App() {
       tags: ['UI/UX', 'React'],
       gradient: 'from-orange-400 via-amber-500 to-yellow-400',
       icon: '☕',
-      stats: [ { label: 'Conversion', value: '+45%' }, { label: 'Speed', value: '0.8s' } ]
+      stats: [ { label: 'Performance', value: '100%' }, { label: 'Design', value: 'Modern' } ]
     },
     {
       title: 'Secure Auth System',
       description: 'Enterprise-level authentication with JWT tokens and encryption.',
-      // 👇👇👇 YAHAN WO LINK HAI JO TU DHOONDH RAHA THA 👇👇👇
-      link: 'https://my-project-frontend-beta.vercel.app',
-      // 👆👆👆 Agar ye link 404 de raha hai, toh ise hata ke sahi link daal de
+      // 👇 Broken link hata ke # lagaya hai, jab project ready ho tab asli link dalna
+      link: 'https://my-project-frontend-beta.vercel.app', 
       tags: ['Security', 'Backend'],
       gradient: 'from-cyan-400 via-blue-500 to-indigo-600',
       icon: '🔒',
-      stats: [ { label: 'Security', value: 'A+' }, { label: 'Users', value: '10K+' } ]
+      stats: [ { label: 'Security', value: 'High' }, { label: 'Database', value: 'MongoDB' } ]
     },
     {
       title: 'Video Streaming App',
@@ -71,7 +69,7 @@ function App() {
       tags: ['API', 'Performance'],
       gradient: 'from-pink-400 via-rose-500 to-red-500',
       icon: '▶️',
-      stats: [ { label: 'Videos', value: '1M+' }, { label: 'Uptime', value: '99%' } ]
+      stats: [ { label: 'Features', value: 'Search/Scroll' }, { label: 'API', value: 'Fast' } ]
     },
   ];
 
@@ -84,18 +82,15 @@ function App() {
     { name: 'Optimization', level: 93, icon: '⚡', color: 'from-yellow-500 to-orange-500' }
   ];
 
+  // REALISTIC STATS (Jhooth Hata Diya)
   const stats = [
-    { number: 50, suffix: '+', label: 'Projects', icon: '🚀', color: 'from-cyan-500 to-blue-600' },
-    { number: 30, suffix: '+', label: 'Clients', icon: '😊', color: 'from-orange-500 to-amber-600' },
-    { number: 99, suffix: '%', label: 'Success', icon: '⭐', color: 'from-pink-500 to-rose-600' },
-    { number: 3, suffix: 'x', label: 'Speed', icon: '💨', color: 'from-green-500 to-emerald-600' }
+    { number: 3, suffix: '+', label: 'Major Projects', icon: '🚀', color: 'from-cyan-500 to-blue-600' },
+    { number: 100, suffix: '%', label: 'Commitment', icon: '🤝', color: 'from-orange-500 to-amber-600' },
+    { number: 24, suffix: '/7', label: 'Support', icon: '⭐', color: 'from-pink-500 to-rose-600' },
+    { number: 3, suffix: 'x', label: 'Faster Dev', icon: '💨', color: 'from-green-500 to-emerald-600' }
   ];
 
-  const testimonials = [
-    { name: 'Sarah Johnson', role: 'CEO, TechStart', text: 'Outstanding work! Delivered our MVP 2 weeks ahead.', rating: 5, avatar: '👩‍💼', color: 'from-cyan-500/20 to-blue-500/20' },
-    { name: 'Mike Chen', role: 'Founder, EcomHub', text: 'The AI-enhanced speed is mind-blowing.', rating: 5, avatar: '👨‍💻', color: 'from-orange-500/20 to-amber-500/20' },
-    { name: 'Priya Sharma', role: 'Product Manager', text: 'Great communication and exact delivery.', rating: 5, avatar: '👩‍🎨', color: 'from-pink-500/20 to-rose-500/20' }
-  ];
+  // NOTE: Testimonials section neeche comment out kar diya hai.
 
   const Counter = ({ end, suffix = '' }) => {
     const [count, setCount] = useState(0);
@@ -156,7 +151,7 @@ function App() {
               <a href="#contact" className="w-full sm:w-auto px-8 py-4 rounded-xl border border-white/10 bg-white/5 font-bold text-lg hover:bg-white/10 transition-all text-center">Let's Collaborate</a>
             </div>
 
-            {/* Available for Work Card */}
+            {/* Available for Work Card - REALISTIC DATA */}
             <div className="relative w-full mx-auto max-w-5xl mt-10">
                <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] h-[90%] bg-cyan-500/20 blur-[60px] rounded-full opacity-40"></div>
                <div className="bg-slate-900/80 border border-cyan-500/30 p-6 md:p-10 rounded-[2rem] backdrop-blur-2xl shadow-2xl">
@@ -170,24 +165,25 @@ function App() {
                              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                              <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
                            </span>
-                           <p className="text-slate-400 text-sm">Ready for new projects</p>
+                           <p className="text-slate-400 text-sm">Open to new opportunities</p>
                         </div>
                       </div>
                     </div>
+                    {/* Realistic Stats for New Freelancer */}
                     <div className="w-full md:w-auto grid grid-cols-2 md:flex md:gap-10 gap-4">
                       <div className="bg-slate-800/50 md:bg-transparent p-4 md:p-0 rounded-2xl text-center md:text-right border md:border-none border-white/5">
-                        <div className="text-xs text-slate-500 mb-1 font-bold uppercase tracking-wider">Experience</div>
-                        <div className="font-black text-2xl md:text-4xl text-white">4+ Years</div>
+                        <div className="text-xs text-slate-500 mb-1 font-bold uppercase tracking-wider">Expertise</div>
+                        <div className="font-black text-xl md:text-3xl text-white">Full Stack</div>
                       </div>
                       <div className="hidden md:block w-px h-16 bg-white/10"></div>
                       <div className="bg-slate-800/50 md:bg-transparent p-4 md:p-0 rounded-2xl text-center md:text-right border md:border-none border-white/5">
                         <div className="text-xs text-slate-500 mb-1 font-bold uppercase tracking-wider">Projects</div>
-                        <div className="font-black text-2xl md:text-4xl text-orange-400">50+</div>
+                        <div className="font-black text-xl md:text-3xl text-orange-400">3+</div>
                       </div>
                       <div className="hidden md:block w-px h-16 bg-white/10"></div>
                       <div className="bg-slate-800/50 md:bg-transparent p-4 md:p-0 rounded-2xl text-center md:text-right border md:border-none border-white/5 col-span-2 md:col-span-1">
                         <div className="text-xs text-slate-500 mb-1 font-bold uppercase tracking-wider">Response</div>
-                        <div className="font-black text-2xl md:text-4xl text-cyan-400">&lt; 2h</div>
+                        <div className="font-black text-xl md:text-3xl text-cyan-400">&lt; 2h</div>
                       </div>
                     </div>
                   </div>
@@ -257,7 +253,12 @@ function App() {
                   <div className="grid grid-cols-2 gap-4 mb-8">
                     {project.stats.map((stat, i) => ( <div key={i} className="bg-slate-800/50 p-3 rounded-xl text-center border border-white/5"> <div className="text-xs text-slate-500 uppercase font-bold mb-1">{stat.label}</div> <div className="text-base font-black text-white">{stat.value}</div> </div> ))}
                   </div>
-                  <a href={project.link} target="_blank" rel="noopener noreferrer" className="block w-full py-4 rounded-xl bg-cyan-500/10 text-cyan-400 font-bold text-center hover:bg-cyan-500 hover:text-white transition-all hover:shadow-lg hover:shadow-cyan-500/20">View Live Demo →</a>
+                  {/* Valid Link logic: Agar link # hai toh button disabled/grey, warna blue */}
+                  {project.link !== '#' ? (
+                      <a href={project.link} target="_blank" rel="noopener noreferrer" className="block w-full py-4 rounded-xl bg-cyan-500/10 text-cyan-400 font-bold text-center hover:bg-cyan-500 hover:text-white transition-all hover:shadow-lg hover:shadow-cyan-500/20">View Live Demo →</a>
+                  ) : (
+                      <button disabled className="block w-full py-4 rounded-xl bg-slate-800 text-slate-500 font-bold text-center cursor-not-allowed">Coming Soon</button>
+                  )}
                 </div>
               </motion.div>
             ))}
@@ -265,26 +266,10 @@ function App() {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-24 px-6 bg-slate-900/30">
-        <div className="container mx-auto max-w-6xl">
-           <h2 className="text-4xl md:text-5xl font-black text-center mb-16">Client <span className="text-blue-500">Reviews</span></h2>
-           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-             {testimonials.map((test, idx) => (
-               <motion.div key={idx} className={`p-8 rounded-3xl bg-gradient-to-br ${test.color} border border-white/5 backdrop-blur-md shadow-lg`} initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ delay: idx * 0.15 }} whileHover={{ y: -5 }}>
-                 <div className="flex items-center gap-4 mb-6">
-                   <div className="text-5xl filter drop-shadow-md">{test.avatar}</div>
-                   <div> <div className="font-bold text-lg">{test.name}</div> <div className="text-sm text-slate-400">{test.role}</div> </div>
-                 </div>
-                 <div className="flex text-yellow-400 text-lg mb-4">{'★'.repeat(test.rating)}</div>
-                 <p className="text-base text-slate-300 italic leading-relaxed">"{test.text}"</p>
-               </motion.div>
-             ))}
-           </div>
-        </div>
-      </section>
+      {/* --- REVIEWS SECTION REMOVED (FAKE HAI ISLIYE) --- */}
+      {/* Jab real reviews aayein, tab is part ko wapis add karna */}
 
-      {/* Contact Section - Updated for Web3Forms */}
+      {/* Contact Section */}
       <section id="contact" className="py-24 px-6">
         <div className="container mx-auto max-w-4xl">
           <div className="bg-slate-900 border border-white/10 p-10 md:p-16 rounded-[3rem] text-center relative overflow-hidden shadow-2xl">
@@ -294,9 +279,7 @@ function App() {
               <p className="text-slate-400 mb-12 text-lg">Ready to start your next project? Send me a message.</p>
               
               <form onSubmit={onSubmit} className="space-y-6 max-w-xl mx-auto">
-                {/* Hidden input to prevent spam */}
                 <input type="checkbox" name="botcheck" className="hidden" style={{display: 'none'}} />
-
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <input type="text" name="name" placeholder="Name" required className="w-full p-5 bg-slate-800/80 rounded-2xl border border-slate-700 focus:border-cyan-500 outline-none transition-colors text-white placeholder-slate-500" />
                   <input type="email" name="email" placeholder="Email" required className="w-full p-5 bg-slate-800/80 rounded-2xl border border-slate-700 focus:border-cyan-500 outline-none transition-colors text-white placeholder-slate-500" />
@@ -306,8 +289,6 @@ function App() {
                 <button type="submit" className="w-full py-5 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl font-bold text-xl shadow-xl hover:shadow-cyan-500/40 transition-all transform hover:scale-[1.02]">
                   Send Message 🚀
                 </button>
-
-                {/* Status Message */}
                 <div className="text-cyan-400 font-bold mt-4">{result}</div>
               </form>
              </div>
