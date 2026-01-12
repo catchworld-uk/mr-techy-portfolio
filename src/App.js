@@ -57,7 +57,7 @@ function App() {
       title: 'Secure Auth System',
       description: 'Enterprise-level authentication with JWT tokens and encryption.',
       // 👇👇👇 YAHAN WO LINK HAI JO TU DHOONDH RAHA THA 👇👇👇
-      link: 'https://my-project-frontend-beta.vercel.app/login',
+      link: 'https://my-project-frontend-beta.vercel.app',
       // 👆👆👆 Agar ye link 404 de raha hai, toh ise hata ke sahi link daal de
       tags: ['Security', 'Backend'],
       gradient: 'from-cyan-400 via-blue-500 to-indigo-600',
