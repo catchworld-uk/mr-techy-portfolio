@@ -92,7 +92,7 @@ async function sendChat(){
     });
     const data = await res.json();
     document.getElementById('typing')?.remove();
-    addMsg(data.output,'bot');
+    addMsg(data, 'bot');
   }catch(e){
     document.getElementById('typing')?.remove();
     addMsg('Error! Try again.','bot');
